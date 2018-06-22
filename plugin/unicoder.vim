@@ -28,6 +28,10 @@ autocmd WinEnter,BufEnter *
   \ | endif
 
 function! s:setup_abbreviations()
+  augroup pencil_iskeyword
+    autocmd!
+  augroup END
+
   " Greek {{{
   " Uppercase greek {{{
   Latexiab GA     Α
