@@ -79,7 +79,7 @@ the insertion.
 
 #### Uppercase greek
   Abbreviations  | Character
------------------|-----------
+:---------------:|:---------:
 `\GA`  `\Alpha`  |     Α
 `\GB`  `\Beta`   |     Β
 `\GG`  `\Gamma`  |     Γ
@@ -107,7 +107,7 @@ the insertion.
 
 #### Lowercase greek
   Abbreviations  | Character
------------------|-----------
+:---------------:|:---------:
 `\ga`  `\alpha`  |     α
 `\gb`  `\beta`   |     β
 `\gg`  `\gamma`  |     γ
@@ -135,7 +135,7 @@ the insertion.
 
 ### Shapes
   Abbreviations  | Character
------------------|-----------
+:---------------:|:---------:
    `\box`        |     □
    `\bbox`       |     ■
    `\sbox`       |     ▫
@@ -168,7 +168,7 @@ the insertion.
 
 ### Miscellaneous
   Abbreviations  | Character
------------------|-----------
+:---------------:|:---------:
 `\dagger`        |     †
 `\ddager`        |     ‡
 `\prime`         |     ′
@@ -179,7 +179,7 @@ the insertion.
 
 ### Math symbols
   Abbreviations  | Character
------------------|-----------
+:---------------:|:---------:
 `\pm`            |     ±
 `\mp`            |     ∓
 `\sum`           |     ∑
@@ -213,7 +213,7 @@ the insertion.
 
 #### Set theory
   Abbreviations  | Character
------------------|-----------
+:---------------:|:---------:
   `\empty`       |     ∅
   `\emptyset`    |     ∅
   `\in`          |     ∈
@@ -233,7 +233,7 @@ the insertion.
 
 #### Lattices
   Abbreviations  | Character
------------------|-----------
+:---------------:|:---------:
   `\sqsubset`    |     ⊏
   `\sqsupset`    |     ⊐
   `\sqsubseteq`  |     ⊑
@@ -243,7 +243,7 @@ the insertion.
 
 #### Logic
   Abbreviations  | Character
------------------|-----------
+:---------------:|:---------:
   `\land`        |     ∧
   `\lor`         |     ∨
   `\lnot`        |     ¬
@@ -261,7 +261,7 @@ the insertion.
 
 #### Calculus
   Abbreviations  | Character
------------------|-----------
+:---------------:|:---------:
   `\nabla`       |     ∇
   `\grad`        |     ∇
   `\partial`     |     𝜕
@@ -276,7 +276,7 @@ the insertion.
 
 #### Equalities
   Abbreviations  | Character
------------------|-----------
+:---------------:|:---------:
 `\sim`  `\~`     |     ∼
 `\nsim` `\~n`    |     ≁
 `\simeq`  `\~=`  |     ≃
@@ -292,7 +292,7 @@ the insertion.
 
 #### Inequalities
   Abbreviations  | Character
------------------|-----------
+:---------------:|:---------:
 `\leq` `\<=`     |     ≤
 `\nleq` `\<=n`   |     ≰
 `\geq` `\>=`     |     ≥
@@ -304,7 +304,7 @@ the insertion.
 
 #### Entailment (turnstiles)
   Abbreviations  | Character
------------------|-----------
+:---------------:|:---------:
 `\entails` `\vdash` `\\|-` | ⊢
 `\nentails` `\nvdash` `\\|-n` | ⊬
 `\dashv` `\-\|`   |     ⊣
@@ -318,7 +318,7 @@ the insertion.
 
 #### Circled operators
   Abbreviations  | Character
------------------|-----------
+:---------------:|:---------:
 `\oplus` `\o+`   |     ⊕
 `\ominus` `\o-`  |     ⊖
 `\otimes` `\ox`  |     ⊗
@@ -330,7 +330,7 @@ the insertion.
 
 #### Boxed operators
   Abbreviations  | Character
------------------|-----------
+:---------------:|:---------:
 `\boxplus` `\bplus` `\b+` | ⊞
 `\boxminus` `\bminus` `\b-` | ⊟
 `\boxtimes` `\btimes` `\bx` | ⊠
@@ -338,7 +338,7 @@ the insertion.
 
 #### Dots
   Abbreviations  | Character
------------------|-----------
+:---------------:|:---------:
 `\ldots` `\...`  |     …
 `\cdots`         |     ⋯
 `\vdots`         |     ⋮
@@ -349,7 +349,7 @@ the insertion.
 
 #### Simple arrows
   Abbreviations  | Character
------------------|-----------
+:---------------:|:---------:
 `\mapsto`        |     ↦
 `\to` `\arrow` `\rarrow` `\rightarrow` `\->` | →
 `\larrow` `\leftarrow` `\<-` | ←
@@ -364,7 +364,7 @@ the insertion.
 
 #### Double arrows
   Abbreviations  | Character
------------------|-----------
+:---------------:|:---------:
 `\To` `\Arrow` `\Rarrow` `\Rightarrow` `\=>` | ⇒
 `\Larrow` `\Leftarrow` `\=<` | ⇐
 `\Uarrow` `\Uparrow` `\=^` `\=!` | ⇑
@@ -378,7 +378,7 @@ the insertion.
 
 ### Sets
   Abbreviations  | Character
------------------|-----------
+:---------------:|:---------:
 `\Bool` `\Bools` `\Boolean` `\Booleans` `\bb` | 𝔹
 `\Ints` `\Integers` `\bz` | ℤ
 `\Rats` `\Rationals` `\bq` | ℚ
@@ -389,7 +389,7 @@ the insertion.
 
 ### Fractions
   Abbreviations  | Character
------------------|-----------
+:---------------:|:---------:
 `\frac14`        |     ¼
 `\frac12`        |     ½
 `\frac34`        |     ¾
@@ -408,7 +408,7 @@ the insertion.
 
 ### Subscripts
   Abbreviations  | Character
------------------|-----------
+:---------------:|:---------:
 `\_a`            |     ₐ
 `\_e`            |     ₑ
 `\_h`            |     ₕ
@@ -444,7 +444,7 @@ the insertion.
 
 ### Superscripts
   Abbreviations  | Character
------------------|-----------
+:---------------:|:---------:
 `\^a`            |     ᵃ
 `\^b`            |     ᵇ
 `\^c`            |     ᶜ
@@ -509,7 +509,7 @@ the insertion.
 
 #### Circled numbers
   Abbreviations  | Character
------------------|-----------
+:---------------:|:---------:
 `\(0)`           |     ⓪
 `\(1)`           |     ①
 `\(2)`           |     ②
@@ -534,7 +534,7 @@ the insertion.
 
 #### Uppercase circled
   Abbreviations  | Character
------------------|-----------
+:---------------:|:---------:
 `\(A)`           |     Ⓐ
 `\(B)`           |     Ⓑ
 `\(C)`           |     Ⓒ
@@ -564,7 +564,7 @@ the insertion.
 
 #### Lowercase circled
   Abbreviations  | Character
------------------|-----------
+:---------------:|:---------:
 `\(a)`           |     ⓐ
 `\(b)`           |     ⓑ
 `\(c)`           |     ⓒ
