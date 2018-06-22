@@ -212,6 +212,7 @@ function! s:setup_abbreviations()
   Latexiab sqrt4       ∜
   Latexiab inf         ∞
   Latexiab propto      ∝
+  Latexiab pitchfork   ⋔
 
   Latexiab forall      ∀
   Latexiab all         ∀
@@ -255,6 +256,14 @@ function! s:setup_abbreviations()
   Latexiab lor         ∨
   Latexiab lnot        ¬
   Latexiab neg         ¬
+
+  Latexiab top         ⊤
+  Latexiab bot         ⊥
+
+  Latexiab multimap    ⊸
+  inoreab \-o          ⊸
+  Latexiab multimapinv ⟜
+  Latexiab invmultimap ⟜
 
   Latexiab parr        ⅋
   Latexiab invamp      ⅋
