@@ -141,23 +141,23 @@ non-id	  In front of the match is a space, tab or the start of the line or
    `\bbox`       |     ■
    `\sbox`       |     ▫
    `\sbbox`      |     ▪
- |
+  ·              |     ·
    `\square`     |     □
    `\bsquare`    |     ■
    `\ssquare`    |     ▫
    `\sbsquare`   |     ▪
- |
+  ·              |     ·
    `\diamond`    |     ◇
    `\bdiamond`   |     ◆
    `\lozenge`    |     ◊
- |
+  ·              |     ·
    `\circle`     |     ○
    `\bcircle`    |     ●
    `\dcircle`    |     ◌
- |
+  ·              |     ·
    `\triangle`   |     △
    `\btriangle`  |     ▲
- |
+  ·              |     ·
    `\skull`      |     ☠
    `\danger`     |     ☡
    `\radiation`  |     ☢
@@ -188,11 +188,11 @@ non-id	  In front of the match is a space, tab or the start of the line or
 -----------------|-----------
     `\pm`        |     ±
     `\mp`        |     ∓
- |
+  ·              |     ·
     `\sum`       |     ∑
     `\prod`      |     ∏
     `\coprod`    |     ∐
- |
+  ·              |     ·
     `\qed`       |     ∎
     `\ast`       |     ∗
     `\x`         |     ×
@@ -212,7 +212,7 @@ non-id	  In front of the match is a space, tab or the start of the line or
     `\inf`       |     ∞
     `\propto`    |     ∝
     `\pitchfork` |     ⋔
- |
+  ·              |     ·
     `\forall`    |     ∀
     `\all`       |     ∀
     `\exists`    |     ∃
@@ -227,12 +227,12 @@ non-id	  In front of the match is a space, tab or the start of the line or
   `\emptyset`    |     ∅
   `\in`          |     ∈
   `\notin`       |     ∉
- |
+  ·              |     ·
   `\inters`      |     ∩
   `\cap`         |     ∩
   `\union`       |     ∪
   `\cup`         |     ∪
- |
+  ·              |     ·
   `\subset`      |     ⊂
   `\supset`      |     ⊃
   `\nsubset`     |     ⊄
@@ -259,18 +259,18 @@ non-id	  In front of the match is a space, tab or the start of the line or
   `\lor`         |     ∨
   `\lnot`        |     ¬
   `\neg`         |     ¬
- |
+  ·              |     ·
   `\top`         |     ⊤
   `\bot`         |     ⊥
- |
+  ·              |     ·
   `\multimap`    |     ⊸
   `\-o`          |     ⊸
   `\multimapinv` |     ⟜
   `\invmultimap` |     ⟜
- |
+  ·              |     ·
   `\parr`        |     ⅋
   `\invamp`      |     ⅋
- |
+  ·              |     ·
   `\therefore`   |     ∴
   `\because`     |     ∵
 
@@ -282,7 +282,7 @@ non-id	  In front of the match is a space, tab or the start of the line or
   `\partial`     |     𝜕
   `\increment`   |     ∆
   `\inc`         |     ∆
- |
+  ·              |     ·
   `\int`         |     ∫
   `\iint`        |     ∬
   `\iiint`       |     ∭
@@ -295,21 +295,21 @@ non-id	  In front of the match is a space, tab or the start of the line or
 -----------------|-----------
 `\sim`  `\~`     |     ∼
 `\nsim` `\~n`    |     ≁
- |
+  ·              |     ·
 `\simeq`  `\~=`  |     ≃
 `\nsimeq` `\~=n` |     ≄
- |
+  ·              |     ·
 `\cong` `\iso` `\~==` | ≅
 `\ncong` `\niso` `\~==n` | ≇
- |
+  ·              |     ·
 `\approx`  `\~~` |     ≈
 `\napprox` `\~~n`|     ≉
- |
+  ·              |     ·
 `\neq` `\=n` `\!=` `\/=` | ≠
- |
+  ·              |     ·
 `\equiv` `\===`  |     ≡
 `\nequiv` `\===n`|     ≢
- |
+  ·              |     ·
 `\Equiv` `\====` |     ≣
 
 #### Inequalities
@@ -317,13 +317,13 @@ non-id	  In front of the match is a space, tab or the start of the line or
 -----------------|-----------
 `\leq` `\<=`     |     ≤
 `\nleq` `\<=n`   |     ≰
- |
+  ·              |     ·
 `\geq` `\>=`     |     ≥
 `\ngeq` `\>=n`   |     ≱
- |
+  ·              |     ·
 `\ll` `\<<`      |     «
 `\lll` `\<<<`    |     ⋘
- |
+  ·              |     ·
 `\gg` `\>>`      |     »
 `\ggg` `\>>>`    |     ⋙
 
@@ -332,18 +332,18 @@ non-id	  In front of the match is a space, tab or the start of the line or
 -----------------|-----------
 `\entails` `\vdash` `\|-` | ⊢
 `\nentails` `\nvdash` `\|-n` | ⊬
- |
+  ·              |     ·
 `\dashv` `\-|`   |     ⊣
- |
+  ·              |     ·
 `\models` `\vDashh` `\|=` | ⊨
 `\nvDash` `\|=n` |     ⊭
- |
+  ·              |     ·
 `\Vdash` `\||-`  |     ⊩
 `\nVdash` `\||-n`|     ⊮
- |
+  ·              |     ·
 `\VDash` `||=`   |     ⊫
 `\nVDash` `||=n` |     ⊯
- |
+  ·              |     ·
 `\Vvdash` `|||-` |     ⊪
 
 #### Circled operators
@@ -381,7 +381,7 @@ non-id	  In front of the match is a space, tab or the start of the line or
   Abbreviations  | Character
 -----------------|-----------
 `\mapsto`        |     ↦
- |
+  ·              |     ·
 `\to` `\arrow` `\rarrow` `\rightarrow` `\->` | →
 `\larrow` `\leftarrow` `\<-` | ←
 `\uarrow` `\uparrow` `\-^` `\-!` | ↑
@@ -457,7 +457,7 @@ non-id	  In front of the match is a space, tab or the start of the line or
 `\_u`            |     ᵤ
 `\_v`            |     ᵥ
 `\_x`            |     ₓ
- |
+  ·              |     ·
 `\_0`            |     ₀
 `\_1`            |     ₁
 `\_2`            |     ₂
@@ -502,7 +502,7 @@ non-id	  In front of the match is a space, tab or the start of the line or
 `\^x`            |     ˣ
 `\^y`            |     ʸ
 `\^z`            |     ᶻ
- |
+  ·              |     ·
 `\^A`            |     ᴬ
 `\^B`            |     ᴮ
 `\^D`            |     ᴰ
@@ -522,7 +522,7 @@ non-id	  In front of the match is a space, tab or the start of the line or
 `\^U`            |     ᵁ
 `\^V`            |     ⱽ
 `\^W`            |     ᵂ
- |
+  ·              |     ·
 `\^0`            |     ⁰
 `\^1`            |     ¹
 `\^2`            |     ²
