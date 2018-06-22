@@ -140,23 +140,18 @@ the insertion.
    `\bbox`       |     ■
    `\sbox`       |     ▫
    `\sbbox`      |     ▪
-  ·              |     ·
    `\square`     |     □
    `\bsquare`    |     ■
    `\ssquare`    |     ▫
    `\sbsquare`   |     ▪
-  ·              |     ·
    `\diamond`    |     ◇
    `\bdiamond`   |     ◆
    `\lozenge`    |     ◊
-  ·              |     ·
    `\circle`     |     ○
    `\bcircle`    |     ●
    `\dcircle`    |     ◌
-  ·              |     ·
    `\triangle`   |     △
    `\btriangle`  |     ▲
-  ·              |     ·
    `\skull`      |     ☠
    `\danger`     |     ☡
    `\radiation`  |     ☢
@@ -187,11 +182,9 @@ the insertion.
 -----------------|-----------
 `\pm`            |     ±
 `\mp`            |     ∓
-  ·              |     ·
 `\sum`           |     ∑
 `\prod`          |     ∏
 `\coprod`        |     ∐
-  ·              |     ·
 `\qed`           |     ∎
 `\ast`           |     ∗
 `\x`             |     ×
@@ -211,7 +204,6 @@ the insertion.
 `\inf`           |     ∞
 `\propto`        |     ∝
 `\pitchfork`     |     ⋔
-  ·              |     ·
 `\forall`        |     ∀
 `\all`           |     ∀
 `\exists`        |     ∃
@@ -226,12 +218,10 @@ the insertion.
   `\emptyset`    |     ∅
   `\in`          |     ∈
   `\notin`       |     ∉
-  ·              |     ·
   `\inters`      |     ∩
   `\cap`         |     ∩
   `\union`       |     ∪
   `\cup`         |     ∪
-  ·              |     ·
   `\subset`      |     ⊂
   `\supset`      |     ⊃
   `\nsubset`     |     ⊄
@@ -258,18 +248,14 @@ the insertion.
   `\lor`         |     ∨
   `\lnot`        |     ¬
   `\neg`         |     ¬
-  ·              |     ·
   `\top`         |     ⊤
   `\bot`         |     ⊥
-  ·              |     ·
   `\multimap`    |     ⊸
   `\-o`          |     ⊸
   `\multimapinv` |     ⟜
   `\invmultimap` |     ⟜
-  ·              |     ·
   `\parr`        |     ⅋
   `\invamp`      |     ⅋
-  ·              |     ·
   `\therefore`   |     ∴
   `\because`     |     ∵
 
@@ -281,7 +267,6 @@ the insertion.
   `\partial`     |     𝜕
   `\increment`   |     ∆
   `\inc`         |     ∆
-  ·              |     ·
   `\int`         |     ∫
   `\iint`        |     ∬
   `\iiint`       |     ∭
@@ -294,21 +279,15 @@ the insertion.
 -----------------|-----------
 `\sim`  `\~`     |     ∼
 `\nsim` `\~n`    |     ≁
-  ·              |     ·
 `\simeq`  `\~=`  |     ≃
 `\nsimeq` `\~=n` |     ≄
-  ·              |     ·
 `\cong` `\iso` `\~==` | ≅
 `\ncong` `\niso` `\~==n` | ≇
-  ·              |     ·
 `\approx`  `\~~` |     ≈
 `\napprox` `\~~n`|     ≉
-  ·              |     ·
 `\neq` `\=n` `\!=` `\/=` | ≠
-  ·              |     ·
 `\equiv` `\===`  |     ≡
 `\nequiv` `\===n`|     ≢
-  ·              |     ·
 `\Equiv` `\====` |     ≣
 
 #### Inequalities
@@ -316,34 +295,26 @@ the insertion.
 -----------------|-----------
 `\leq` `\<=`     |     ≤
 `\nleq` `\<=n`   |     ≰
-  ·              |     ·
 `\geq` `\>=`     |     ≥
 `\ngeq` `\>=n`   |     ≱
-  ·              |     ·
 `\ll` `\<<`      |     «
 `\lll` `\<<<`    |     ⋘
-  ·              |     ·
 `\gg` `\>>`      |     »
 `\ggg` `\>>>`    |     ⋙
 
 #### Entailment (turnstiles)
   Abbreviations  | Character
 -----------------|-----------
-`\entails` `\vdash` `\|-` | ⊢
-`\nentails` `\nvdash` `\|-n` | ⊬
-  ·              |     ·
-`\dashv` `\-|`   |     ⊣
-  ·              |     ·
-`\models` `\vDashh` `\|=` | ⊨
-`\nvDash` `\|=n` |     ⊭
-  ·              |     ·
-`\Vdash` `\||-`  |     ⊩
-`\nVdash` `\||-n`|     ⊮
-  ·              |     ·
-`\VDash` `||=`   |     ⊫
-`\nVDash` `||=n` |     ⊯
-  ·              |     ·
-`\Vvdash` `|||-` |     ⊪
+`\entails` `\vdash` `\\|-` | ⊢
+`\nentails` `\nvdash` `\\|-n` | ⊬
+`\dashv` `\-\|`   |     ⊣
+`\models` `\vDashh` `\\|=` | ⊨
+`\nvDash` `\\|=n` |     ⊭
+`\Vdash` `\\|\|-`  |     ⊩
+`\nVdash` `\\|\|-n`|     ⊮
+`\VDash` `\\|\|=`   |     ⊫
+`\nVDash` `\\|\|=n` |     ⊯
+`\Vvdash` `\\|\|\|-` |     ⊪
 
 #### Circled operators
   Abbreviations  | Character
@@ -380,7 +351,6 @@ the insertion.
   Abbreviations  | Character
 -----------------|-----------
 `\mapsto`        |     ↦
-  ·              |     ·
 `\to` `\arrow` `\rarrow` `\rightarrow` `\->` | →
 `\larrow` `\leftarrow` `\<-` | ←
 `\uarrow` `\uparrow` `\-^` `\-!` | ↑
@@ -456,7 +426,6 @@ the insertion.
 `\_u`            |     ᵤ
 `\_v`            |     ᵥ
 `\_x`            |     ₓ
-  ·              |     ·
 `\_0`            |     ₀
 `\_1`            |     ₁
 `\_2`            |     ₂
@@ -501,7 +470,6 @@ the insertion.
 `\^x`            |     ˣ
 `\^y`            |     ʸ
 `\^z`            |     ᶻ
-  ·              |     ·
 `\^A`            |     ᴬ
 `\^B`            |     ᴮ
 `\^D`            |     ᴰ
@@ -521,7 +489,6 @@ the insertion.
 `\^U`            |     ᵁ
 `\^V`            |     ⱽ
 `\^W`            |     ᵂ
-  ·              |     ·
 `\^0`            |     ⁰
 `\^1`            |     ¹
 `\^2`            |     ²
