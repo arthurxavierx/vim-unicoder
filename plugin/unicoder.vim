@@ -168,7 +168,6 @@ function! s:setup_abbreviations()
   Latexiab frownie     ☹
   Latexiab smiley      ☺
   Latexiab blacksmiley ☻
-
   Latexiab sun         ☼
   Latexiab rightmoon   ☽
   Latexiab leftmoon    ☾
@@ -196,7 +195,7 @@ function! s:setup_abbreviations()
 
   Latexiab qed         ∎
   Latexiab ast         ∗
-  Latexiab x           ×
+  inoreab \x           ×
   Latexiab times       ×
   Latexiab div         ÷
   Latexiab bullet      •
@@ -274,6 +273,7 @@ function! s:setup_abbreviations()
 
   " Calculus {{{
   Latexiab nabla       ∇
+  Latexiab grad        ∇
   Latexiab partial     𝜕
   Latexiab increment   ∆
   Latexiab inc         ∆
@@ -356,6 +356,7 @@ function! s:setup_abbreviations()
   Latexiab dashv       ⊣
   inoreab \-\|         ⊣
 
+  Latexiab models      ⊨
   Latexiab vDash       ⊨
   Latexiab nvDash      ⊭
   inoreab \\|=         ⊨
@@ -408,7 +409,7 @@ function! s:setup_abbreviations()
 
   inoreab \b+          ⊞
   Latexiab \b-         ⊟
-  inoreab bx           ⊠
+  inoreab \bx          ⊠
   inoreab \b.          ⊡
   " }}}
   " }}}
@@ -423,7 +424,10 @@ function! s:setup_abbreviations()
   " }}}
 
   " Arrows {{{
+
   " Simple {{{
+  Latexiab mapsto      ↦
+
   Latexiab to          →
   Latexiab arrow       →
   Latexiab rarrow      →
@@ -436,7 +440,7 @@ function! s:setup_abbreviations()
   Latexiab downarrow   ↓
   Latexiab lrarrow     ↔
   Latexiab leftrightarrow ↔
-  Latexiab uparrow     ↕
+  Latexiab udarrow     ↕
   Latexiab updownarrow ↕
   Latexiab nwarrow     ↖
   Latexiab nearrow     ↗
@@ -466,7 +470,7 @@ function! s:setup_abbreviations()
   Latexiab Downarrow   ⇓
   Latexiab Lrarrow     ⇔
   Latexiab Leftrightarrow ⇔
-  Latexiab Uparrow     ⇕
+  Latexiab Udarrow     ⇕
   Latexiab Updownarrow ⇕
   Latexiab Nwarrow     ⇖
   Latexiab Nearrow     ⇗
@@ -474,7 +478,7 @@ function! s:setup_abbreviations()
   Latexiab Swarrow     ⇙
 
   inoreab \=>          ⇒
-  inoreab \<=          ⇐
+  inoreab \=<          ⇐
   inoreab \=v          ⇓
   inoreab \=^          ⇑
   inoreab \=!          ⇑
@@ -485,14 +489,13 @@ function! s:setup_abbreviations()
   " }}}
 
   " Sets {{{
+  Latexiab bb          𝔹
   Latexiab bn          ℕ
   Latexiab bz          ℤ
   Latexiab bq          ℚ
   Latexiab br          ℝ
   Latexiab bc          ℂ
   Latexiab bp          ℙ
-  Latexiab bb          𝔹
-  Latexiab bsum        ⅀
 
   Latexiab Bool        𝔹
   Latexiab Bools       𝔹
