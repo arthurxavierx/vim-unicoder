@@ -4,7 +4,7 @@ Insert cool unicode characters while in _insert mode_ just by typing LaTeX and [
 
 ## Demo
 
-[![asciicast](https://asciinema.org/a/jAk6t8sEyTBQX2LPcEdUwbQtS.png)](https://asciinema.org/a/jAk6t8sEyTBQX2LPcEdUwbQtS)
+[![asciicast](https://asciinema.org/a/wiIUvgkeufLnqV3VPuJrvPpJJ.png)](https://asciinema.org/a/wiIUvgkeufLnqV3VPuJrvPpJJ)
 
 ## Table of contents
 
