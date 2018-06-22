@@ -408,8 +408,8 @@ function! s:setup_abbreviations()
   Latexiab bdot        ⊡
 
   inoreab \b+          ⊞
-  Latexiab \b-         ⊟
-  inoreab \bx          ⊠
+  inoreab \b-          ⊟
+  Latexiab bx          ⊠
   inoreab \b.          ⊡
   " }}}
   " }}}
