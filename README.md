@@ -2,13 +2,12 @@
 
 Insert cool unicode characters while in _insert mode_ just by typing LaTeX and [Agda Mode](http://agda.readthedocs.io/en/v2.5.2/tools/emacs-mode.html#common-characters) inspired abbreviations.
 
-## Demo
+![Screencast](https://raw.githubusercontent.com/arthurxavierx/vim-unicoder/master/vim-unicoder.gif)
 
-[![asciicast](https://asciinema.org/a/wiIUvgkeufLnqV3VPuJrvPpJJ.png)](https://asciinema.org/a/wiIUvgkeufLnqV3VPuJrvPpJJ)
+[Slower version (asciicast)](https://asciinema.org/a/wiIUvgkeufLnqV3VPuJrvPpJJ)
 
 ## Table of contents
 
-1. [Demo](#demo)
 1. [Installation](#installation)
 1. [Usage](#installation)
 1. [List of abbreviations](#list-of-abbreviations)
