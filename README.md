@@ -13,32 +13,32 @@ Insert cool unicode characters while in _insert mode_ just by typing LaTeX and [
 1. [Usage](#installation)
 1. [List of abbreviations](#list-of-abbreviations)
   - [Greek letters](#greek-letters)
-    - [Uppercase greek](#uppercase-greek)
-    - [Lowercase greek](#lowercase-greek)
+- [Uppercase greek](#uppercase-greek)
+- [Lowercase greek](#lowercase-greek)
   - [Shapes](#shapes)
   - [Miscellaneous](#miscellaneous)
   - [Math symbols](#math-symbols)
-    - [Set theory](#set-theory)
-    - [Lattices](#lattices)
-    - [Logic](#logic)
-    - [Calculus](#calculus)
-    - [Equalities](#equalities)
-    - [Inequalities](#inequalities)
-    - [Entailment (turnstiles)](#entailment-turnstiles)
-    - [Circled operators](#circled-operators)
-    - [Boxed operators](#boxed-operators)
-    - [Dots](#dots)
+- [Set theory](#set-theory)
+- [Lattices](#lattices)
+- [Logic](#logic)
+- [Calculus](#calculus)
+- [Equalities](#equalities)
+- [Inequalities](#inequalities)
+- [Entailment (turnstiles)](#entailment-turnstiles)
+- [Circled operators](#circled-operators)
+- [Boxed operators](#boxed-operators)
+- [Dots](#dots)
   - [Arrows](#arrows)
-    - [Simple arrows](#simple-arrows)
-    - [Double arrows](#double-arrows)
+- [Simple arrows](#simple-arrows)
+- [Double arrows](#double-arrows)
   - [Sets](#sets)
   - [Fractions](#fractions)
   - [Subscripts](#subscripts)
   - [Superscripts](#superscripts)
   - [Circled](#circled)
-    - [Circled numbers](#circled-numbers)
-    - [Uppercase circled](#uppercase-circled)
-    - [Lowercase circled](#lowercase-circled)
+- [Circled numbers](#circled-numbers)
+- [Uppercase circled](#uppercase-circled)
+- [Lowercase circled](#lowercase-circled)
 
 ## Installation
 
@@ -63,15 +63,15 @@ The characters before the cursor must match the abbreviation.  Each type has
 an additional rule:
 
 full-id	  In front of the match is a non-keyword character, or this is where
-          the line or insertion starts.  Exception: When the abbreviation is
-          only one character, it is not recognized if there is a non-keyword
-          character in front of it, other than a space or a tab.
+the line or insertion starts.  Exception: When the abbreviation is
+only one character, it is not recognized if there is a non-keyword
+character in front of it, other than a space or a tab.
 
 end-id	  In front of the match is a keyword character, or a space or a tab,
-          or this is where the line or insertion starts.
+or this is where the line or insertion starts.
 
 non-id	  In front of the match is a space, tab or the start of the line or
-          the insertion.
+the insertion.
 ```
 
 ## List of abbreviations
@@ -175,50 +175,50 @@ non-id	  In front of the match is a space, tab or the start of the line or
 ### Miscellaneous
   Abbreviations  | Character
 -----------------|-----------
-    `\dagger`    |     †
-    `\ddager`    |     ‡
-    `\prime`     |     ′
-    `\second`    |     ″
-    `\third`     |     ‴
-    `\fourth`    |     ⁗
-    `\euro`      |     €
+`\dagger`        |     †
+`\ddager`        |     ‡
+`\prime`         |     ′
+`\second`        |     ″
+`\third`         |     ‴
+`\fourth`        |     ⁗
+`\euro`          |     €
 
 ### Math symbols
   Abbreviations  | Character
 -----------------|-----------
-    `\pm`        |     ±
-    `\mp`        |     ∓
+`\pm`            |     ±
+`\mp`            |     ∓
   ·              |     ·
-    `\sum`       |     ∑
-    `\prod`      |     ∏
-    `\coprod`    |     ∐
+`\sum`           |     ∑
+`\prod`          |     ∏
+`\coprod`        |     ∐
   ·              |     ·
-    `\qed`       |     ∎
-    `\ast`       |     ∗
-    `\x`         |     ×
-    `\times`     |     ×
-    `\div`       |     ÷
-    `\bullet`    |     •
-    `\o`         |     ∘
-    `\comp`      |     ∘
-    `\circ`      |     ∘
-    `\cdot`      |     ∙
-    `\.`         |     ∙
-    `\:`         |     ∶
-    `\::`        |     ∷
-    `\sqrt`      |     √
-    `\sqrt3`     |     ∛
-    `\sqrt4`     |     ∜
-    `\inf`       |     ∞
-    `\propto`    |     ∝
-    `\pitchfork` |     ⋔
+`\qed`           |     ∎
+`\ast`           |     ∗
+`\x`             |     ×
+`\times`         |     ×
+`\div`           |     ÷
+`\bullet`        |     •
+`\o`             |     ∘
+`\comp`          |     ∘
+`\circ`          |     ∘
+`\cdot`          |     ∙
+`\.`             |     ∙
+`\:`             |     ∶
+`\::`            |     ∷
+`\sqrt`          |     √
+`\sqrt3`         |     ∛
+`\sqrt4`         |     ∜
+`\inf`           |     ∞
+`\propto`        |     ∝
+`\pitchfork`     |     ⋔
   ·              |     ·
-    `\forall`    |     ∀
-    `\all`       |     ∀
-    `\exists`    |     ∃
-    `\ex`        |     ∃
-    `\nexists`   |     ∄
-    `\nex`       |     ∄
+`\forall`        |     ∀
+`\all`           |     ∀
+`\exists`        |     ∃
+`\ex`            |     ∃
+`\nexists`       |     ∄
+`\nex`           |     ∄
 
 #### Set theory
   Abbreviations  | Character
