@@ -473,14 +473,14 @@ function! s:setup_abbreviations()
   Latexiab Searrow     ⇘
   Latexiab Swarrow     ⇙
 
-  inoreab \->          ⇒
-  inoreab \<-          ⇐
-  inoreab \-v          ⇓
-  inoreab \-^          ⇑
-  inoreab \-!          ⇑
-  inoreab \<->         ⇔
-  inoreab \^-v         ⇕
-  inoreab \!-v         ⇕
+  inoreab \=>          ⇒
+  inoreab \<=          ⇐
+  inoreab \=v          ⇓
+  inoreab \=^          ⇑
+  inoreab \=!          ⇑
+  inoreab \<=>         ⇔
+  inoreab \^=v         ⇕
+  inoreab \!=v         ⇕
   " }}}
   " }}}
 
