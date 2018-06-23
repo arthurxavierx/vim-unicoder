@@ -10,6 +10,8 @@ Insert cool unicode characters while in _insert mode_ just by typing LaTeX and [
 
 1. [Installation](#installation)
 1. [Usage](#installation)
+    - [Excluding filetypes](#excluding-filetypes)
+    - [Limitations](#limitations)
 1. [List of abbreviations](#list-of-abbreviations)
     - [Greek letters](#greek-letters)
         - [Uppercase greek](#uppercase-greek)
@@ -53,6 +55,15 @@ Plug 'arthurxavierx/vim-unicoder'
 
 `vim-unicoder` makes it easy to insert unicode characters in Vim buffers. By using Vim's native [abbreviations](http://vimdoc.sourceforge.net/htmldoc/map.html#abbreviations), it's possible, for instance, to just type `\int x\^n` (and press space, any other separator or `<C-]>` after the `n`) and the text becomes `∫ xⁿ` as you write it.
 
+### Excluding filetypes
+
+It is possible and also desirable to not setup these abbreviations in some files (for instance, in LaTeX files). For that, the `g:unicoder_exclude_filetypes` variable can be used. Its default value is:
+
+```vim
+let g:unicoder_exclude_filetypes = ['tex', 'latex', 'plaintex']
+```
+
+### Limitations
 Because this plugin uses Vim's native abbreviations, it has some limitations, though. Please, be aware of them before submitting issues to this project.
 
 This section of Vim's help file on [abbreviations](http://vimdoc.sourceforge.net/htmldoc/map.html#abbreviations) explains some of the limitations:
