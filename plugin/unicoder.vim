@@ -358,7 +358,9 @@ function! s:setup_abbreviations()
   " }}}
 
   " Entailment (turnstiles) {{{
+  Prefixab  \\ ent         ⊢
   Prefixab  \\ entails     ⊢
+  Prefixab  \\ nent        ⊬
   Prefixab  \\ nentails    ⊬
   Prefixab  \\ vdash       ⊢
   Prefixab  \\ nvdash      ⊬

@@ -306,8 +306,8 @@ the insertion.
 #### Entailment (turnstiles)
   Abbreviations  | Character
 :---------------:|:---------:
-`\entails` `\vdash` `\\|-` | ⊢
-`\nentails` `\nvdash` `\\|-n` | ⊬
+`\ent` `\entails` `\vdash` `\\|-` | ⊢
+`\nent` `\nentails` `\nvdash` `\\|-n` | ⊬
 `\dashv` `\-\|`   |     ⊣
 `\models` `\vDashh` `\\|=` | ⊨
 `\nvDash` `\\|=n` |     ⊭
