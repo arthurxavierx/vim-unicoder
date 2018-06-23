@@ -21,13 +21,14 @@ function! s:crepl(prefix, default, repl)
   return getcmdline()[getcmdpos() - len(a:prefix) - 1] == a:prefix ? nr2char(8).a:repl : a:default
 endfunction
 
-function! s:Latexiab(opts, lhs, rhs)
-  exe 'inoreab '.a:opts.' '.a:lhs.' <c-r>=<sid>irepl("\\", '.string(a:lhs).', '.string(a:rhs).')<cr>'
+function! s:Prefixab(opts, prefix, lhs, rhs)
+  let args = string(a:prefix).', '.string(a:lhs).', '.string(a:rhs)
+  exe 'inoreab '.a:opts.' '.a:lhs.' <c-r>=<sid>irepl('.args.')<cr>'
   if g:unicoder_command_abbreviations
-    exe 'cnoreab '.a:opts.' '.a:lhs.' <c-r>=<sid>crepl("\\", '.string(a:lhs).', '.string(a:rhs).')<cr>'
+    exe 'cnoreab '.a:opts.' '.a:lhs.' <c-r>=<sid>crepl('.args.')<cr>'
   endif
 endfunction
-command! -nargs=+ Latexiab call s:Latexiab('<buffer>', <f-args>)
+command! -nargs=+ Prefixab call s:Prefixab('<buffer>', <f-args>)
 
 " Initialization
 autocmd WinEnter,BufEnter *
@@ -42,688 +43,688 @@ function! s:setup_abbreviations()
 
   " Greek {{{
   " Uppercase greek {{{
-  Latexiab GA     Α
-  Latexiab GB     Β
-  Latexiab GG     Γ
-  Latexiab GD     Δ
-  Latexiab GE     Ε
-  Latexiab GZ     Ζ
-  Latexiab GH     Η
-  Latexiab GTH    Θ
-  Latexiab GI     Ι
-  Latexiab GK     Κ
-  Latexiab GL     Λ
-  Latexiab GM     Μ
-  Latexiab GN     Ν
-  Latexiab GX     Ξ
-  Latexiab GO     Ο
-  Latexiab GP     Π
-  Latexiab GR     Ρ
-  Latexiab GS     Σ
-  Latexiab GT     Τ
-  Latexiab GU     Υ
-  Latexiab GF     Φ
-  Latexiab GC     Χ
-  Latexiab GPS    Ψ
-  Latexiab GW     Ω
+  Prefixab \\ GA     Α
+  Prefixab \\ GB     Β
+  Prefixab \\ GG     Γ
+  Prefixab \\ GD     Δ
+  Prefixab \\ GE     Ε
+  Prefixab \\ GZ     Ζ
+  Prefixab \\ GH     Η
+  Prefixab \\ GTH    Θ
+  Prefixab \\ GI     Ι
+  Prefixab \\ GK     Κ
+  Prefixab \\ GL     Λ
+  Prefixab \\ GM     Μ
+  Prefixab \\ GN     Ν
+  Prefixab \\ GX     Ξ
+  Prefixab \\ GO     Ο
+  Prefixab \\ GP     Π
+  Prefixab \\ GR     Ρ
+  Prefixab \\ GS     Σ
+  Prefixab \\ GT     Τ
+  Prefixab \\ GU     Υ
+  Prefixab \\ GF     Φ
+  Prefixab \\ GC     Χ
+  Prefixab \\ GPS    Ψ
+  Prefixab \\ GW     Ω
 
-  Latexiab Alpha       Α
-  Latexiab Beta        Β
-  Latexiab Gamma       Γ
-  Latexiab Delta       Δ
-  Latexiab Epsilon     Ε
-  Latexiab Zeta        Ζ
-  Latexiab Eta         Η
-  Latexiab Theta       Θ
-  Latexiab Iota        Ι
-  Latexiab Kappa       Κ
-  Latexiab Lambda      Λ
-  Latexiab Mu          Μ
-  Latexiab Nu          Ν
-  Latexiab Xi          Ξ
-  Latexiab Omicron     Ο
-  Latexiab Pi          Π
-  Latexiab Rho         Ρ
-  Latexiab Sigma       Σ
-  Latexiab Tau         Τ
-  Latexiab Upsilon     Υ
-  Latexiab Phi         Φ
-  Latexiab Chi         Χ
-  Latexiab Psi         Ψ
-  Latexiab Omega       Ω
+  Prefixab \\ Alpha       Α
+  Prefixab \\ Beta        Β
+  Prefixab \\ Gamma       Γ
+  Prefixab \\ Delta       Δ
+  Prefixab \\ Epsilon     Ε
+  Prefixab \\ Zeta        Ζ
+  Prefixab \\ Eta         Η
+  Prefixab \\ Theta       Θ
+  Prefixab \\ Iota        Ι
+  Prefixab \\ Kappa       Κ
+  Prefixab \\ Lambda      Λ
+  Prefixab \\ Mu          Μ
+  Prefixab \\ Nu          Ν
+  Prefixab \\ Xi          Ξ
+  Prefixab \\ Omicron     Ο
+  Prefixab \\ Pi          Π
+  Prefixab \\ Rho         Ρ
+  Prefixab \\ Sigma       Σ
+  Prefixab \\ Tau         Τ
+  Prefixab \\ Upsilon     Υ
+  Prefixab \\ Phi         Φ
+  Prefixab \\ Chi         Χ
+  Prefixab \\ Psi         Ψ
+  Prefixab \\ Omega       Ω
   " }}}
 
   " Lowercase greek {{{
-  Latexiab ga     α
-  Latexiab gb     β
-  Latexiab gg     γ
-  Latexiab gd     δ
-  Latexiab ge     ε
-  Latexiab gz     ζ
-  Latexiab gh     η
-  Latexiab gth    θ
-  Latexiab gi     ι
-  Latexiab gk     κ
-  Latexiab gl     λ
-  Latexiab gm     μ
-  Latexiab gn     ν
-  Latexiab gx     ξ
-  Latexiab go     ο
-  Latexiab gp     π
-  Latexiab gr     ρ
-  Latexiab gs     σ
-  Latexiab gt     τ
-  Latexiab gu     υ
-  Latexiab gf     φ
-  Latexiab gc     χ
-  Latexiab gps    ψ
-  Latexiab gw     ω
+  Prefixab \\ ga     α
+  Prefixab \\ gb     β
+  Prefixab \\ gg     γ
+  Prefixab \\ gd     δ
+  Prefixab \\ ge     ε
+  Prefixab \\ gz     ζ
+  Prefixab \\ gh     η
+  Prefixab \\ gth    θ
+  Prefixab \\ gi     ι
+  Prefixab \\ gk     κ
+  Prefixab \\ gl     λ
+  Prefixab \\ gm     μ
+  Prefixab \\ gn     ν
+  Prefixab \\ gx     ξ
+  Prefixab \\ go     ο
+  Prefixab \\ gp     π
+  Prefixab \\ gr     ρ
+  Prefixab \\ gs     σ
+  Prefixab \\ gt     τ
+  Prefixab \\ gu     υ
+  Prefixab \\ gf     φ
+  Prefixab \\ gc     χ
+  Prefixab \\ gps    ψ
+  Prefixab \\ gw     ω
 
-  Latexiab alpha       α
-  Latexiab beta        β
-  Latexiab gamma       γ
-  Latexiab delta       δ
-  Latexiab epsilon     ε
-  Latexiab zeta        ζ
-  Latexiab eta         η
-  Latexiab theta       θ
-  Latexiab iota        ι
-  Latexiab kappa       κ
-  Latexiab lambda      λ
-  Latexiab mu          μ
-  Latexiab nu          ν
-  Latexiab xi          ξ
-  Latexiab omicron     ο
-  Latexiab pi          π
-  Latexiab rho         ρ
-  Latexiab sigma       σ
-  Latexiab tau         τ
-  Latexiab upsilon     υ
-  Latexiab phi         φ
-  Latexiab chi         χ
-  Latexiab psi         ψ
-  Latexiab omega       ω
+  Prefixab \\ alpha       α
+  Prefixab \\ beta        β
+  Prefixab \\ gamma       γ
+  Prefixab \\ delta       δ
+  Prefixab \\ epsilon     ε
+  Prefixab \\ zeta        ζ
+  Prefixab \\ eta         η
+  Prefixab \\ theta       θ
+  Prefixab \\ iota        ι
+  Prefixab \\ kappa       κ
+  Prefixab \\ lambda      λ
+  Prefixab \\ mu          μ
+  Prefixab \\ nu          ν
+  Prefixab \\ xi          ξ
+  Prefixab \\ omicron     ο
+  Prefixab \\ pi          π
+  Prefixab \\ rho         ρ
+  Prefixab \\ sigma       σ
+  Prefixab \\ tau         τ
+  Prefixab \\ upsilon     υ
+  Prefixab \\ phi         φ
+  Prefixab \\ chi         χ
+  Prefixab \\ psi         ψ
+  Prefixab \\ omega       ω
   " }}}
   " }}}
 
   " Shapes {{{
-  Latexiab box         □
-  Latexiab bbox        ■
-  Latexiab sbox        ▫
-  Latexiab sbbox       ▪
+  Prefixab \\ box         □
+  Prefixab \\ bbox        ■
+  Prefixab \\ sbox        ▫
+  Prefixab \\ sbbox       ▪
 
-  Latexiab square      □
-  Latexiab bsquare     ■
-  Latexiab ssquare     ▫
-  Latexiab sbsquare    ▪
+  Prefixab \\ square      □
+  Prefixab \\ bsquare     ■
+  Prefixab \\ ssquare     ▫
+  Prefixab \\ sbsquare    ▪
 
-  Latexiab diamond     ◇
-  Latexiab bdiamond    ◆
-  Latexiab lozenge     ◊
+  Prefixab \\ diamond     ◇
+  Prefixab \\ bdiamond    ◆
+  Prefixab \\ lozenge     ◊
 
-  Latexiab circle      ○
-  Latexiab bcircle     ●
-  Latexiab dcircle     ◌
+  Prefixab \\ circle      ○
+  Prefixab \\ bcircle     ●
+  Prefixab \\ dcircle     ◌
 
-  Latexiab triangle    △
-  Latexiab btriangle   ▲
+  Prefixab \\ triangle    △
+  Prefixab \\ btriangle   ▲
 
-  Latexiab skull       ☠
-  Latexiab danger      ☡
-  Latexiab radiation   ☢
-  Latexiab biohazard   ☣
-  Latexiab yinyang     ☯
-  Latexiab frownie     ☹
-  Latexiab smiley      ☺
-  Latexiab blacksmiley ☻
-  Latexiab sun         ☼
-  Latexiab rightmoon   ☽
-  Latexiab leftmoon    ☾
-  Latexiab female      ♀
-  Latexiab male        ♂
+  Prefixab \\ skull       ☠
+  Prefixab \\ danger      ☡
+  Prefixab \\ radiation   ☢
+  Prefixab \\ biohazard   ☣
+  Prefixab \\ yinyang     ☯
+  Prefixab \\ frownie     ☹
+  Prefixab \\ smiley      ☺
+  Prefixab \\ blacksmiley ☻
+  Prefixab \\ sun         ☼
+  Prefixab \\ rightmoon   ☽
+  Prefixab \\ leftmoon    ☾
+  Prefixab \\ female      ♀
+  Prefixab \\ male        ♂
   " }}}
 
   " Miscellaneous {{{
-  Latexiab dagger      †
-  Latexiab ddager      ‡
-  Latexiab prime       ′
-  Latexiab second      ″
-  Latexiab third       ‴
-  Latexiab fourth      ⁗
-  Latexiab euro        €
+  Prefixab \\ dagger      †
+  Prefixab \\ ddager      ‡
+  Prefixab \\ prime       ′
+  Prefixab \\ second      ″
+  Prefixab \\ third       ‴
+  Prefixab \\ fourth      ⁗
+  Prefixab \\ euro        €
   " }}}
 
   " Math {{{
-  Latexiab pm          ±
-  Latexiab mp          ∓
+  Prefixab \\ pm          ±
+  Prefixab \\ mp          ∓
 
-  Latexiab sum         ∑
-  Latexiab prod        ∏
-  Latexiab coprod      ∐
+  Prefixab \\ sum         ∑
+  Prefixab \\ prod        ∏
+  Prefixab \\ coprod      ∐
 
-  Latexiab qed         ∎
-  Latexiab ast         ∗
-  inoreab \x           ×
-  Latexiab times       ×
-  Latexiab div         ÷
-  Latexiab bullet      •
-  Latexiab o           ∘
-  Latexiab comp        ∘
-  Latexiab circ        ∘
-  Latexiab cdot        ∙
-  inoreab \.           ∙
-  inoreab \:           ∶
-  inoreab \::          ∷
-  Latexiab sqrt        √
-  Latexiab sqrt3       ∛
-  Latexiab sqrt4       ∜
-  Latexiab inf         ∞
-  Latexiab propto      ∝
-  Latexiab pitchfork   ⋔
+  Prefixab \\ qed         ∎
+  Prefixab \\ ast         ∗
+  inoreab   \x            ×
+  Prefixab \\ times       ×
+  Prefixab \\ div         ÷
+  Prefixab \\ bullet      •
+  Prefixab \\ o           ∘
+  Prefixab \\ comp        ∘
+  Prefixab \\ circ        ∘
+  Prefixab \\ cdot        ∙
+  inoreab   \.            ∙
+  inoreab   \:            ∶
+  inoreab   \::           ∷
+  Prefixab \\ sqrt        √
+  Prefixab \\ sqrt3       ∛
+  Prefixab \\ sqrt4       ∜
+  Prefixab \\ inf         ∞
+  Prefixab \\ propto      ∝
+  Prefixab \\ pitchfork   ⋔
 
-  Latexiab forall      ∀
-  Latexiab all         ∀
-  Latexiab exists      ∃
-  Latexiab ex          ∃
-  Latexiab nexists     ∄
-  Latexiab nex         ∄
+  Prefixab \\ forall      ∀
+  Prefixab \\ all         ∀
+  Prefixab \\ exists      ∃
+  Prefixab \\ ex          ∃
+  Prefixab \\ nexists     ∄
+  Prefixab \\ nex         ∄
 
   " Sets {{{
-  Latexiab empty       ∅
-  Latexiab emptyset    ∅
-  Latexiab in          ∈
-  Latexiab notin       ∉
+  Prefixab \\ empty       ∅
+  Prefixab \\ emptyset    ∅
+  Prefixab \\ in          ∈
+  Prefixab \\ notin       ∉
 
-  Latexiab inters      ∩
-  Latexiab cap         ∩
-  Latexiab union       ∪
-  Latexiab cup         ∪
+  Prefixab \\ inters      ∩
+  Prefixab \\ cap         ∩
+  Prefixab \\ union       ∪
+  Prefixab \\ cup         ∪
 
-  Latexiab subset      ⊂
-  Latexiab supset      ⊃
-  Latexiab nsubset     ⊄
-  Latexiab nsupset     ⊅
-  Latexiab subseteq    ⊆
-  Latexiab supseteq    ⊇
-  Latexiab nsubseteq   ⊈
-  Latexiab nsupseteq   ⊉
+  Prefixab \\ subset      ⊂
+  Prefixab \\ supset      ⊃
+  Prefixab \\ nsubset     ⊄
+  Prefixab \\ nsupset     ⊅
+  Prefixab \\ subseteq    ⊆
+  Prefixab \\ supseteq    ⊇
+  Prefixab \\ nsubseteq   ⊈
+  Prefixab \\ nsupseteq   ⊉
   " }}}
 
   " Lattices {{{
-  Latexiab sqsubset    ⊏
-  Latexiab sqsupset    ⊐
-  Latexiab sqsubseteq  ⊑
-  Latexiab sqsupseteq  ⊒
-  Latexiab sqcap       ⊓
-  Latexiab sqcup       ⊔
+  Prefixab \\ sqsubset    ⊏
+  Prefixab \\ sqsupset    ⊐
+  Prefixab \\ sqsubseteq  ⊑
+  Prefixab \\ sqsupseteq  ⊒
+  Prefixab \\ sqcap       ⊓
+  Prefixab \\ sqcup       ⊔
   " }}}
 
   " Logic {{{
-  Latexiab land        ∧
-  Latexiab lor         ∨
-  Latexiab lnot        ¬
-  Latexiab neg         ¬
+  Prefixab \\ land        ∧
+  Prefixab \\ lor         ∨
+  Prefixab \\ lnot        ¬
+  Prefixab \\ neg         ¬
 
-  Latexiab top         ⊤
-  Latexiab bot         ⊥
+  Prefixab \\ top         ⊤
+  Prefixab \\ bot         ⊥
 
-  Latexiab multimap    ⊸
-  inoreab \-o          ⊸
-  Latexiab multimapinv ⟜
-  Latexiab invmultimap ⟜
+  Prefixab \\ multimap    ⊸
+  inoreab   \-o           ⊸
+  Prefixab \\ multimapinv ⟜
+  Prefixab \\ invmultimap ⟜
 
-  Latexiab parr        ⅋
-  Latexiab invamp      ⅋
+  Prefixab \\ parr        ⅋
+  Prefixab \\ invamp      ⅋
 
-  Latexiab therefore   ∴
-  Latexiab because     ∵
+  Prefixab \\ therefore   ∴
+  Prefixab \\ because     ∵
   " }}}
 
   " Calculus {{{
-  Latexiab nabla       ∇
-  Latexiab grad        ∇
-  Latexiab partial     𝜕
-  Latexiab increment   ∆
-  Latexiab inc         ∆
+  Prefixab \\ nabla       ∇
+  Prefixab \\ grad        ∇
+  Prefixab \\ partial     𝜕
+  Prefixab \\ increment   ∆
+  Prefixab \\ inc         ∆
 
-  Latexiab int         ∫
-  Latexiab iint        ∬
-  Latexiab iiint       ∭
-  Latexiab oint        ∮
-  Latexiab oiint       ∯
-  Latexiab oiiint      ∰
+  Prefixab \\ int         ∫
+  Prefixab \\ iint        ∬
+  Prefixab \\ iiint       ∭
+  Prefixab \\ oint        ∮
+  Prefixab \\ oiint       ∯
+  Prefixab \\ oiiint      ∰
   " }}}
 
   " Equalities {{{
-  Latexiab sim         ∼
-  Latexiab nsim        ≁
-  inoreab \~           ∼
-  inoreab \~n          ≁
+  Prefixab \\ sim         ∼
+  Prefixab \\ nsim        ≁
+  inoreab   \~            ∼
+  inoreab   \~n           ≁
 
-  Latexiab simeq       ≃
-  Latexiab nsimeq      ≄
-  inoreab \~=          ≃
-  inoreab \~=n         ≄
+  Prefixab \\ simeq       ≃
+  Prefixab \\ nsimeq      ≄
+  inoreab   \~=           ≃
+  inoreab   \~=n          ≄
 
-  Latexiab cong        ≅
-  Latexiab ncong       ≇
-  Latexiab iso         ≅
-  Latexiab niso        ≇
-  inoreab \~==         ≅
-  inoreab \~==n        ≇
+  Prefixab \\ cong        ≅
+  Prefixab \\ ncong       ≇
+  Prefixab \\ iso         ≅
+  Prefixab \\ niso        ≇
+  inoreab   \~==          ≅
+  inoreab   \~==n         ≇
 
-  Latexiab approx      ≈
-  Latexiab napprox     ≉
-  inoreab \~~          ≈
-  inoreab \~~n         ≉
+  Prefixab \\ approx      ≈
+  Prefixab \\ napprox     ≉
+  inoreab   \~~           ≈
+  inoreab   \~~n          ≉
 
-  Latexiab neq         ≠
-  inoreab \=n          ≠
-  inoreab \!=          ≠
-  inoreab \/=          ≠
+  Prefixab \\ neq         ≠
+  inoreab   \=n           ≠
+  inoreab   \!=           ≠
+  inoreab   \/=           ≠
 
-  Latexiab equiv       ≡
-  Latexiab nequiv      ≢
-  inoreab \===         ≡
-  inoreab \===n        ≢
+  Prefixab \\ equiv       ≡
+  Prefixab \\ nequiv      ≢
+  inoreab   \===          ≡
+  inoreab   \===n         ≢
 
-  Latexiab Equiv       ≣
-  inoreab \====        ≣
+  Prefixab \\ Equiv       ≣
+  inoreab   \====         ≣
   " }}}
 
   " Inequalities {{{
-  Latexiab leq         ≤
-  Latexiab nleq        ≰
-  inoreab  \<=         ≤
-  inoreab  \<=n        ≰
+  Prefixab \\ leq         ≤
+  Prefixab \\ nleq        ≰
+  inoreab   \<=         ≤
+  inoreab   \<=n        ≰
 
-  Latexiab geq         ≥
-  Latexiab ngeq        ≱
-  inoreab  \>=         ≥
-  inoreab  \>=n        ≱
+  Prefixab \\ geq         ≥
+  Prefixab \\ ngeq        ≱
+  inoreab   \>=         ≥
+  inoreab   \>=n        ≱
 
-  Latexiab ll          «
-  inoreab \<<          «
-  Latexiab lll         ⋘
-  inoreab \<<<         ⋘
+  Prefixab \\ ll          «
+  inoreab   \<<           «
+  Prefixab \\ lll         ⋘
+  inoreab   \<<<          ⋘
 
-  Latexiab gg          »
-  inoreab \>>          »
-  Latexiab ggg         ⋙
-  inoreab \>>>         ⋙
+  Prefixab \\ gg          »
+  inoreab   \>>           »
+  Prefixab \\ ggg         ⋙
+  inoreab   \>>>          ⋙
   " }}}
 
   " Entailment (turnstiles) {{{
-  Latexiab entails     ⊢
-  Latexiab nentails    ⊬
-  Latexiab vdash       ⊢
-  Latexiab nvdash      ⊬
-  inoreab \\|-         ⊢
-  inoreab \\|-n        ⊬
+  Prefixab \\ entails     ⊢
+  Prefixab \\ nentails    ⊬
+  Prefixab \\ vdash       ⊢
+  Prefixab \\ nvdash      ⊬
+  inoreab   \\|-          ⊢
+  inoreab   \\|-n         ⊬
 
-  Latexiab dashv       ⊣
-  inoreab \-\|         ⊣
+  Prefixab \\ dashv       ⊣
+  inoreab   \-\|          ⊣
 
-  Latexiab models      ⊨
-  Latexiab vDash       ⊨
-  Latexiab nvDash      ⊭
-  inoreab \\|=         ⊨
-  inoreab \\|=n        ⊭
+  Prefixab \\ models      ⊨
+  Prefixab \\ vDash       ⊨
+  Prefixab \\ nvDash      ⊭
+  inoreab   \\|=          ⊨
+  inoreab   \\|=n         ⊭
 
-  Latexiab Vdash       ⊩
-  Latexiab nVdash      ⊮
-  inoreab \\|\|-       ⊩
-  inoreab \\|\|-n      ⊮
+  Prefixab \\ Vdash       ⊩
+  Prefixab \\ nVdash      ⊮
+  inoreab   \\|\|-        ⊩
+  inoreab   \\|\|-n       ⊮
 
-  Latexiab VDash       ⊫
-  Latexiab nVDash      ⊯
-  inoreab \\|\|=       ⊫
-  inoreab \\|\|=n      ⊯
+  Prefixab \\ VDash       ⊫
+  Prefixab \\ nVDash      ⊯
+  inoreab   \\|\|=        ⊫
+  inoreab   \\|\|=n       ⊯
 
-  Latexiab Vvdash      ⊪
-  inoreab \\|\|\|-     ⊪
+  Prefixab \\ Vvdash      ⊪
+  inoreab   \\|\|\|-      ⊪
   " }}}
 
   " Circled operators {{{
-  Latexiab oplus       ⊕
-  Latexiab ominus      ⊖
-  Latexiab otimes      ⊗
-  Latexiab oslash      ⊘
-  Latexiab odot        ⊙
-  Latexiab ocirc       ⊚
-  Latexiab oast        ⊛
-  Latexiab oequal      ⊜
+  Prefixab \\ oplus       ⊕
+  Prefixab \\ ominus      ⊖
+  Prefixab \\ otimes      ⊗
+  Prefixab \\ oslash      ⊘
+  Prefixab \\ odot        ⊙
+  Prefixab \\ ocirc       ⊚
+  Prefixab \\ oast        ⊛
+  Prefixab \\ oequal      ⊜
 
-  inoreab \o+          ⊕
-  inoreab \o-          ⊖
-  Latexiab ox          ⊗
-  inoreab \o/          ⊘
-  inoreab \o.          ⊙
-  Latexiab oo          ⊚
-  inoreab \o*          ⊛
-  inoreab \o=          ⊜
+  inoreab   \o+           ⊕
+  inoreab   \o-           ⊖
+  Prefixab \\ ox          ⊗
+  inoreab   \o/           ⊘
+  inoreab   \o.           ⊙
+  Prefixab \\ oo          ⊚
+  inoreab   \o*           ⊛
+  inoreab   \o=           ⊜
   " }}}
 
   " Boxed operators {{{
-  Latexiab boxplus     ⊞
-  Latexiab boxminus    ⊟
-  Latexiab boxtimes    ⊠
-  Latexiab boxdot      ⊡
+  Prefixab \\ boxplus     ⊞
+  Prefixab \\ boxminus    ⊟
+  Prefixab \\ boxtimes    ⊠
+  Prefixab \\ boxdot      ⊡
 
-  Latexiab bplus       ⊞
-  Latexiab bminus      ⊟
-  Latexiab btimes      ⊠
-  Latexiab bdot        ⊡
+  Prefixab \\ bplus       ⊞
+  Prefixab \\ bminus      ⊟
+  Prefixab \\ btimes      ⊠
+  Prefixab \\ bdot        ⊡
 
-  inoreab \b+          ⊞
-  inoreab \b-          ⊟
-  Latexiab bx          ⊠
-  inoreab \b.          ⊡
+  inoreab   \b+           ⊞
+  inoreab   \b-           ⊟
+  Prefixab \\ bx          ⊠
+  inoreab   \b.           ⊡
   " }}}
   " }}}
 
   " Dots {{{
-  Latexiab ldots       …
-  inoreab \...         …
-  Latexiab cdots       ⋯
-  Latexiab vdots       ⋮
-  Latexiab iddots      ⋰
-  Latexiab ddots       ⋱
+  Prefixab \\ ldots       …
+  inoreab   \...          …
+  Prefixab \\ cdots       ⋯
+  Prefixab \\ vdots       ⋮
+  Prefixab \\ iddots      ⋰
+  Prefixab \\ ddots       ⋱
   " }}}
 
   " Arrows {{{
 
   " Simple {{{
-  Latexiab mapsto      ↦
+  Prefixab \\ mapsto      ↦
 
-  Latexiab to          →
-  Latexiab arrow       →
-  Latexiab rarrow      →
-  Latexiab rightarrow  →
-  Latexiab larrow      ←
-  Latexiab leftarrow   ←
-  Latexiab uarrow      ↑
-  Latexiab uparrow     ↑
-  Latexiab darrow      ↓
-  Latexiab downarrow   ↓
-  Latexiab lrarrow     ↔
-  Latexiab leftrightarrow ↔
-  Latexiab udarrow     ↕
-  Latexiab updownarrow ↕
-  Latexiab nwarrow     ↖
-  Latexiab nearrow     ↗
-  Latexiab searrow     ↘
-  Latexiab swarrow     ↙
+  Prefixab \\ to          →
+  Prefixab \\ arrow       →
+  Prefixab \\ rarrow      →
+  Prefixab \\ rightarrow  →
+  Prefixab \\ larrow      ←
+  Prefixab \\ leftarrow   ←
+  Prefixab \\ uarrow      ↑
+  Prefixab \\ uparrow     ↑
+  Prefixab \\ darrow      ↓
+  Prefixab \\ downarrow   ↓
+  Prefixab \\ lrarrow     ↔
+  Prefixab \\ leftrightarrow ↔
+  Prefixab \\ udarrow     ↕
+  Prefixab \\ updownarrow ↕
+  Prefixab \\ nwarrow     ↖
+  Prefixab \\ nearrow     ↗
+  Prefixab \\ searrow     ↘
+  Prefixab \\ swarrow     ↙
 
-  inoreab \->          →
-  inoreab \<-          ←
-  inoreab \-v          ↓
-  inoreab \-^          ↑
-  inoreab \-!          ↑
-  inoreab \<->         ↔
-  inoreab \^-v         ↕
-  inoreab \!-v         ↕
+  inoreab   \->           →
+  inoreab   \<-           ←
+  inoreab   \-v           ↓
+  inoreab   \-^           ↑
+  inoreab   \-!           ↑
+  inoreab   \<->          ↔
+  inoreab   \^-v          ↕
+  inoreab   \!-v          ↕
   " }}}
 
   " Double {{{
-  Latexiab To          ⇒
-  Latexiab Arrow       ⇒
-  Latexiab Rarrow      ⇒
-  Latexiab Rightarrow  ⇒
-  Latexiab Larrow      ⇐
-  Latexiab Leftarrow   ⇐
-  Latexiab Uarrow      ⇑
-  Latexiab Uparrow     ⇑
-  Latexiab Darrow      ⇓
-  Latexiab Downarrow   ⇓
-  Latexiab Lrarrow     ⇔
-  Latexiab Leftrightarrow ⇔
-  Latexiab Udarrow     ⇕
-  Latexiab Updownarrow ⇕
-  Latexiab Nwarrow     ⇖
-  Latexiab Nearrow     ⇗
-  Latexiab Searrow     ⇘
-  Latexiab Swarrow     ⇙
+  Prefixab \\ To          ⇒
+  Prefixab \\ Arrow       ⇒
+  Prefixab \\ Rarrow      ⇒
+  Prefixab \\ Rightarrow  ⇒
+  Prefixab \\ Larrow      ⇐
+  Prefixab \\ Leftarrow   ⇐
+  Prefixab \\ Uarrow      ⇑
+  Prefixab \\ Uparrow     ⇑
+  Prefixab \\ Darrow      ⇓
+  Prefixab \\ Downarrow   ⇓
+  Prefixab \\ Lrarrow     ⇔
+  Prefixab \\ Leftrightarrow ⇔
+  Prefixab \\ Udarrow     ⇕
+  Prefixab \\ Updownarrow ⇕
+  Prefixab \\ Nwarrow     ⇖
+  Prefixab \\ Nearrow     ⇗
+  Prefixab \\ Searrow     ⇘
+  Prefixab \\ Swarrow     ⇙
 
-  inoreab \=>          ⇒
-  inoreab \=<          ⇐
-  inoreab \=v          ⇓
-  inoreab \=^          ⇑
-  inoreab \=!          ⇑
-  inoreab \<=>         ⇔
-  inoreab \^=v         ⇕
-  inoreab \!=v         ⇕
+  inoreab   \=>           ⇒
+  inoreab   \=<           ⇐
+  inoreab   \=v           ⇓
+  inoreab   \=^           ⇑
+  inoreab   \=!           ⇑
+  inoreab   \<=>          ⇔
+  inoreab   \^=v          ⇕
+  inoreab   \!=v          ⇕
   " }}}
   " }}}
 
   " Sets {{{
-  Latexiab bb          𝔹
-  Latexiab bn          ℕ
-  Latexiab bz          ℤ
-  Latexiab bq          ℚ
-  Latexiab br          ℝ
-  Latexiab bc          ℂ
-  Latexiab bp          ℙ
+  Prefixab \\ bb          𝔹
+  Prefixab \\ bn          ℕ
+  Prefixab \\ bz          ℤ
+  Prefixab \\ bq          ℚ
+  Prefixab \\ br          ℝ
+  Prefixab \\ bc          ℂ
+  Prefixab \\ bp          ℙ
 
-  Latexiab Bool        𝔹
-  Latexiab Bools       𝔹
-  Latexiab Nats        ℕ
-  Latexiab Ints        ℤ
-  Latexiab Rats        ℚ
-  Latexiab Comps       ℂ
-  Latexiab Quats       ℍ
+  Prefixab \\ Bool        𝔹
+  Prefixab \\ Bools       𝔹
+  Prefixab \\ Nats        ℕ
+  Prefixab \\ Ints        ℤ
+  Prefixab \\ Rats        ℚ
+  Prefixab \\ Comps       ℂ
+  Prefixab \\ Quats       ℍ
 
-  Latexiab Boolean     𝔹
-  Latexiab Booleans    𝔹
-  Latexiab Integers    ℤ
-  Latexiab Rationals   ℚ
-  Latexiab Reals       ℝ
-  Latexiab Complex     ℂ
-  Latexiab Complexes   ℂ
-  Latexiab Quaternions ℍ
-  Latexiab Primes      ℙ
+  Prefixab \\ Boolean     𝔹
+  Prefixab \\ Booleans    𝔹
+  Prefixab \\ Integers    ℤ
+  Prefixab \\ Rationals   ℚ
+  Prefixab \\ Reals       ℝ
+  Prefixab \\ Complex     ℂ
+  Prefixab \\ Complexes   ℂ
+  Prefixab \\ Quaternions ℍ
+  Prefixab \\ Primes      ℙ
   " }}}
 
   " Fractions {{{
-  Latexiab frac14      ¼
-  Latexiab frac12      ½
-  Latexiab frac34      ¾
-  Latexiab frac13      ⅓
-  Latexiab frac23      ⅔
-  Latexiab frac15      ⅕
-  Latexiab frac25      ⅖
-  Latexiab frac35      ⅗
-  Latexiab frac45      ⅘
-  Latexiab frac16      ⅙
-  Latexiab frac56      ⅚
-  Latexiab frac18      ⅛
-  Latexiab frac38      ⅜
-  Latexiab frac58      ⅝
-  Latexiab frac78      ⅞
+  Prefixab \\ frac14      ¼
+  Prefixab \\ frac12      ½
+  Prefixab \\ frac34      ¾
+  Prefixab \\ frac13      ⅓
+  Prefixab \\ frac23      ⅔
+  Prefixab \\ frac15      ⅕
+  Prefixab \\ frac25      ⅖
+  Prefixab \\ frac35      ⅗
+  Prefixab \\ frac45      ⅘
+  Prefixab \\ frac16      ⅙
+  Prefixab \\ frac56      ⅚
+  Prefixab \\ frac18      ⅛
+  Prefixab \\ frac38      ⅜
+  Prefixab \\ frac58      ⅝
+  Prefixab \\ frac78      ⅞
   " }}}
 
   " Subscripts {{{
-  Latexiab _a          ₐ
-  Latexiab _e          ₑ
-  Latexiab _h          ₕ
-  Latexiab _i          ᵢ
-  Latexiab _j          ⱼ
-  Latexiab _k          ₖ
-  Latexiab _l          ₗ
-  Latexiab _m          ₘ
-  Latexiab _n          ₙ
-  Latexiab _o          ₒ
-  Latexiab _p          ₚ
-  Latexiab _r          ᵣ
-  Latexiab _s          ₛ
-  Latexiab _t          ₜ
-  Latexiab _u          ᵤ
-  Latexiab _v          ᵥ
-  Latexiab _x          ₓ
+  Prefixab \\ _a          ₐ
+  Prefixab \\ _e          ₑ
+  Prefixab \\ _h          ₕ
+  Prefixab \\ _i          ᵢ
+  Prefixab \\ _j          ⱼ
+  Prefixab \\ _k          ₖ
+  Prefixab \\ _l          ₗ
+  Prefixab \\ _m          ₘ
+  Prefixab \\ _n          ₙ
+  Prefixab \\ _o          ₒ
+  Prefixab \\ _p          ₚ
+  Prefixab \\ _r          ᵣ
+  Prefixab \\ _s          ₛ
+  Prefixab \\ _t          ₜ
+  Prefixab \\ _u          ᵤ
+  Prefixab \\ _v          ᵥ
+  Prefixab \\ _x          ₓ
 
-  Latexiab _0          ₀
-  Latexiab _1          ₁
-  Latexiab _2          ₂
-  Latexiab _3          ₃
-  Latexiab _4          ₄
-  Latexiab _5          ₅
-  Latexiab _6          ₆
-  Latexiab _7          ₇
-  Latexiab _8          ₈
-  Latexiab _9          ₉
-  inoreab \_+          ₊
-  inoreab \_-          ₋
-  inoreab \_=          ₌
-  inoreab \_(          ₍
-  inoreab \_)          ₎
+  Prefixab \\ _0          ₀
+  Prefixab \\ _1          ₁
+  Prefixab \\ _2          ₂
+  Prefixab \\ _3          ₃
+  Prefixab \\ _4          ₄
+  Prefixab \\ _5          ₅
+  Prefixab \\ _6          ₆
+  Prefixab \\ _7          ₇
+  Prefixab \\ _8          ₈
+  Prefixab \\ _9          ₉
+  inoreab   \_+           ₊
+  inoreab   \_-           ₋
+  inoreab   \_=           ₌
+  inoreab   \_(           ₍
+  inoreab   \_)           ₎
   " }}}
 
   " Superscripts {{{
-  inoreab \^a          ᵃ
-  inoreab \^b          ᵇ
-  inoreab \^c          ᶜ
-  inoreab \^d          ᵈ
-  inoreab \^e          ᵉ
-  inoreab \^f          ᶠ
-  inoreab \^g          ᵍ
-  inoreab \^h          ʰ
-  inoreab \^i          ⁱ
-  inoreab \^j          ʲ
-  inoreab \^k          ᵏ
-  inoreab \^l          ˡ
-  inoreab \^m          ᵐ
-  inoreab \^n          ⁿ
-  inoreab \^o          ᵒ
-  inoreab \^p          ᵖ
-  inoreab \^r          ʳ
-  inoreab \^s          ˢ
-  inoreab \^t          ᵗ
-  inoreab \^u          ᵘ
-  inoreab \^v          ᵛ
-  inoreab \^w          ʷ
-  inoreab \^x          ˣ
-  inoreab \^y          ʸ
-  inoreab \^z          ᶻ
+  inoreab   \^a           ᵃ
+  inoreab   \^b           ᵇ
+  inoreab   \^c           ᶜ
+  inoreab   \^d           ᵈ
+  inoreab   \^e           ᵉ
+  inoreab   \^f           ᶠ
+  inoreab   \^g           ᵍ
+  inoreab   \^h           ʰ
+  inoreab   \^i           ⁱ
+  inoreab   \^j           ʲ
+  inoreab   \^k           ᵏ
+  inoreab   \^l           ˡ
+  inoreab   \^m           ᵐ
+  inoreab   \^n           ⁿ
+  inoreab   \^o           ᵒ
+  inoreab   \^p           ᵖ
+  inoreab   \^r           ʳ
+  inoreab   \^s           ˢ
+  inoreab   \^t           ᵗ
+  inoreab   \^u           ᵘ
+  inoreab   \^v           ᵛ
+  inoreab   \^w           ʷ
+  inoreab   \^x           ˣ
+  inoreab   \^y           ʸ
+  inoreab   \^z           ᶻ
 
-  inoreab \^A          ᴬ
-  inoreab \^B          ᴮ
-  inoreab \^D          ᴰ
-  inoreab \^E          ᴱ
-  inoreab \^G          ᴳ
-  inoreab \^H          ᴴ
-  inoreab \^I          ᴵ
-  inoreab \^J          ᴶ
-  inoreab \^K          ᴷ
-  inoreab \^L          ᴸ
-  inoreab \^M          ᴹ
-  inoreab \^N          ᴺ
-  inoreab \^O          ᴼ
-  inoreab \^P          ᴾ
-  inoreab \^R          ᴿ
-  inoreab \^T          ᵀ
-  inoreab \^U          ᵁ
-  inoreab \^V          ⱽ
-  inoreab \^W          ᵂ
+  inoreab   \^A           ᴬ
+  inoreab   \^B           ᴮ
+  inoreab   \^D           ᴰ
+  inoreab   \^E           ᴱ
+  inoreab   \^G           ᴳ
+  inoreab   \^H           ᴴ
+  inoreab   \^I           ᴵ
+  inoreab   \^J           ᴶ
+  inoreab   \^K           ᴷ
+  inoreab   \^L           ᴸ
+  inoreab   \^M           ᴹ
+  inoreab   \^N           ᴺ
+  inoreab   \^O           ᴼ
+  inoreab   \^P           ᴾ
+  inoreab   \^R           ᴿ
+  inoreab   \^T           ᵀ
+  inoreab   \^U           ᵁ
+  inoreab   \^V           ⱽ
+  inoreab   \^W           ᵂ
 
-  inoreab \^0          ⁰
-  inoreab \^1          ¹
-  inoreab \^2          ²
-  inoreab \^3          ³
-  inoreab \^4          ⁴
-  inoreab \^5          ⁵
-  inoreab \^6          ⁶
-  inoreab \^7          ⁷
-  inoreab \^8          ⁸
-  inoreab \^9          ⁹
-  inoreab \^+          ⁺
-  inoreab \^-          ⁻
-  inoreab \^=          ⁼
-  inoreab \^(          ⁽
-  inoreab \^)          ⁾
+  inoreab   \^0           ⁰
+  inoreab   \^1           ¹
+  inoreab   \^2           ²
+  inoreab   \^3           ³
+  inoreab   \^4           ⁴
+  inoreab   \^5           ⁵
+  inoreab   \^6           ⁶
+  inoreab   \^7           ⁷
+  inoreab   \^8           ⁸
+  inoreab   \^9           ⁹
+  inoreab   \^+           ⁺
+  inoreab   \^-           ⁻
+  inoreab   \^=           ⁼
+  inoreab   \^(           ⁽
+  inoreab   \^)           ⁾
   " }}}
 
   " Circled {{{
 
   " Numbers {{{
-  inoreab \(0)         ⓪
-  inoreab \(1)         ①
-  inoreab \(2)         ②
-  inoreab \(3)         ③
-  inoreab \(4)         ④
-  inoreab \(5)         ⑤
-  inoreab \(6)         ⑥
-  inoreab \(7)         ⑦
-  inoreab \(8)         ⑧
-  inoreab \(9)         ⑨
-  inoreab \(10)        ⑩
-  inoreab \(11)        ⑪
-  inoreab \(12)        ⑫
-  inoreab \(13)        ⑬
-  inoreab \(14)        ⑭
-  inoreab \(15)        ⑮
-  inoreab \(16)        ⑯
-  inoreab \(17)        ⑰
-  inoreab \(18)        ⑱
-  inoreab \(19)        ⑲
-  inoreab \(20)        ⑳
+  inoreab   \(0)          ⓪
+  inoreab   \(1)          ①
+  inoreab   \(2)          ②
+  inoreab   \(3)          ③
+  inoreab   \(4)          ④
+  inoreab   \(5)          ⑤
+  inoreab   \(6)          ⑥
+  inoreab   \(7)          ⑦
+  inoreab   \(8)          ⑧
+  inoreab   \(9)          ⑨
+  inoreab   \(10)         ⑩
+  inoreab   \(11)         ⑪
+  inoreab   \(12)         ⑫
+  inoreab   \(13)         ⑬
+  inoreab   \(14)         ⑭
+  inoreab   \(15)         ⑮
+  inoreab   \(16)         ⑯
+  inoreab   \(17)         ⑰
+  inoreab   \(18)         ⑱
+  inoreab   \(19)         ⑲
+  inoreab   \(20)         ⑳
   " }}}
 
   " Uppercase {{{
-  inoreab \(A)         Ⓐ
-  inoreab \(B)         Ⓑ
-  inoreab \(C)         Ⓒ
-  inoreab \(D)         Ⓓ
-  inoreab \(E)         Ⓔ
-  inoreab \(F)         Ⓕ
-  inoreab \(G)         Ⓖ
-  inoreab \(H)         Ⓗ
-  inoreab \(I)         Ⓘ
-  inoreab \(J)         Ⓙ
-  inoreab \(K)         Ⓚ
-  inoreab \(L)         Ⓛ
-  inoreab \(M)         Ⓜ
-  inoreab \(N)         Ⓝ
-  inoreab \(O)         Ⓞ
-  inoreab \(P)         Ⓟ
-  inoreab \(Q)         Ⓠ
-  inoreab \(R)         Ⓡ
-  inoreab \(S)         Ⓢ
-  inoreab \(T)         Ⓣ
-  inoreab \(U)         Ⓤ
-  inoreab \(V)         Ⓥ
-  inoreab \(W)         Ⓦ
-  inoreab \(X)         Ⓧ
-  inoreab \(Y)         Ⓨ
-  inoreab \(Z)         Ⓩ
+  inoreab   \(A)          Ⓐ
+  inoreab   \(B)          Ⓑ
+  inoreab   \(C)          Ⓒ
+  inoreab   \(D)          Ⓓ
+  inoreab   \(E)          Ⓔ
+  inoreab   \(F)          Ⓕ
+  inoreab   \(G)          Ⓖ
+  inoreab   \(H)          Ⓗ
+  inoreab   \(I)          Ⓘ
+  inoreab   \(J)          Ⓙ
+  inoreab   \(K)          Ⓚ
+  inoreab   \(L)          Ⓛ
+  inoreab   \(M)          Ⓜ
+  inoreab   \(N)          Ⓝ
+  inoreab   \(O)          Ⓞ
+  inoreab   \(P)          Ⓟ
+  inoreab   \(Q)          Ⓠ
+  inoreab   \(R)          Ⓡ
+  inoreab   \(S)          Ⓢ
+  inoreab   \(T)          Ⓣ
+  inoreab   \(U)          Ⓤ
+  inoreab   \(V)          Ⓥ
+  inoreab   \(W)          Ⓦ
+  inoreab   \(X)          Ⓧ
+  inoreab   \(Y)          Ⓨ
+  inoreab   \(Z)          Ⓩ
   " }}}
 
   " Lowercase {{{
-  inoreab \(a)         ⓐ
-  inoreab \(b)         ⓑ
-  inoreab \(c)         ⓒ
-  inoreab \(d)         ⓓ
-  inoreab \(e)         ⓔ
-  inoreab \(f)         ⓕ
-  inoreab \(g)         ⓖ
-  inoreab \(h)         ⓗ
-  inoreab \(i)         ⓘ
-  inoreab \(j)         ⓙ
-  inoreab \(k)         ⓚ
-  inoreab \(l)         ⓛ
-  inoreab \(m)         ⓜ
-  inoreab \(n)         ⓝ
-  inoreab \(o)         ⓞ
-  inoreab \(p)         ⓟ
-  inoreab \(q)         ⓠ
-  inoreab \(r)         ⓡ
-  inoreab \(s)         ⓢ
-  inoreab \(t)         ⓣ
-  inoreab \(u)         ⓤ
-  inoreab \(v)         ⓥ
-  inoreab \(w)         ⓦ
-  inoreab \(x)         ⓧ
-  inoreab \(y)         ⓨ
-  inoreab \(z)         ⓩ
+  inoreab   \(a)          ⓐ
+  inoreab   \(b)          ⓑ
+  inoreab   \(c)          ⓒ
+  inoreab   \(d)          ⓓ
+  inoreab   \(e)          ⓔ
+  inoreab   \(f)          ⓕ
+  inoreab   \(g)          ⓖ
+  inoreab   \(h)          ⓗ
+  inoreab   \(i)          ⓘ
+  inoreab   \(j)          ⓙ
+  inoreab   \(k)          ⓚ
+  inoreab   \(l)          ⓛ
+  inoreab   \(m)          ⓜ
+  inoreab   \(n)          ⓝ
+  inoreab   \(o)          ⓞ
+  inoreab   \(p)          ⓟ
+  inoreab   \(q)          ⓠ
+  inoreab   \(r)          ⓡ
+  inoreab   \(s)          ⓢ
+  inoreab   \(t)          ⓣ
+  inoreab   \(u)          ⓤ
+  inoreab   \(v)          ⓥ
+  inoreab   \(w)          ⓦ
+  inoreab   \(x)          ⓧ
+  inoreab   \(y)          ⓨ
+  inoreab   \(z)          ⓩ
   " }}}
   " }}}
 endfunction
