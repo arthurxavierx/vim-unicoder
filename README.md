@@ -58,7 +58,11 @@ Plug 'arthurxavierx/vim-unicoder'
 ### Limitations
 Because this plugin uses Vim's native abbreviations, it has some limitations, though. Please, be aware of them before submitting issues to this project.
 
-This section of Vim's help file on [abbreviations](http://vimdoc.sourceforge.net/htmldoc/map.html#abbreviations) explains some of the limitations:
+The abbreviations here defined do tightly depend on the value of the `iskeyword` setting, which varies according to the file type.
+Some abbreviations here defined will not work with file types that define conflicting keywords.
+
+Also, regarding the insertion and replacement of the abbreviations, some abbreviations will not work if there are special characters right before them.
+This section of Vim's help file on [:h abbreviations](http://vimdoc.sourceforge.net/htmldoc/map.html#abbreviations) explains this limitation:
 
 ```
 The characters before the cursor must match the abbreviation.  Each type has
