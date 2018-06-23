@@ -187,15 +187,11 @@ the insertion.
 `\coprod`        |     ∐
 `\qed`           |     ∎
 `\ast`           |     ∗
-`\x`             |     ×
-`\times`         |     ×
+`\x` `\times`    |     ×
 `\div`           |     ÷
 `\bullet`        |     •
-`\o`             |     ∘
-`\comp`          |     ∘
-`\circ`          |     ∘
-`\cdot`          |     ∙
-`\.`             |     ∙
+`\o` `\comp` `\circ`|     ∘
+`\.` `\cdot`     |     ∙
 `\:`             |     ∶
 `\::`            |     ∷
 `\sqrt`          |     √
@@ -204,24 +200,18 @@ the insertion.
 `\inf`           |     ∞
 `\propto`        |     ∝
 `\pitchfork`     |     ⋔
-`\forall`        |     ∀
-`\all`           |     ∀
-`\exists`        |     ∃
-`\ex`            |     ∃
-`\nexists`       |     ∄
-`\nex`           |     ∄
+`\all` `\forall` |     ∀
+`\ex` `\exists`  |     ∃
+`\nex` `\nexists`|     ∄
 
 #### Set theory
   Abbreviations  | Character
 :---------------:|:---------:
-  `\empty`       |     ∅
-  `\emptyset`    |     ∅
+  `\empty` `\emptyset`|     ∅
   `\in`          |     ∈
   `\notin`       |     ∉
-  `\inters`      |     ∩
-  `\cap`         |     ∩
-  `\union`       |     ∪
-  `\cup`         |     ∪
+  `\cap` `\inters`|     ∩
+  `\cup` `\union`|     ∪
   `\subset`      |     ⊂
   `\supset`      |     ⊃
   `\nsubset`     |     ⊄
@@ -262,11 +252,9 @@ the insertion.
 #### Calculus
   Abbreviations  | Character
 :---------------:|:---------:
-  `\nabla`       |     ∇
-  `\grad`        |     ∇
+  `\grad` `\nabla`|     ∇
   `\partial`     |     𝜕
-  `\increment`   |     ∆
-  `\inc`         |     ∆
+  `\inc` `\increment`|     ∆
   `\int`         |     ∫
   `\iint`        |     ∬
   `\iiint`       |     ∭
