@@ -3,25 +3,33 @@ if exists('g:loaded_unicoder')
 endif
 let g:loaded_unicoder = 1
 
-"
-function! s:Expr(prefix, default, repl)
-  if getline('.')[col('.') - 2] == a:prefix
-    return "\<bs>".a:repl
-  else
-    return a:default
-  endif
-endfunction
-
-function! s:Latexiab(opts, lhs, rhs)
-  exe 'inoreab '.a:opts.' '.a:lhs.' <c-r>=<sid>Expr("\\", '.string(a:lhs).', '.string(a:rhs).')<cr>'
-endfunction
-command! -nargs=+ Latexiab call s:Latexiab('<buffer>', <f-args>)
-
-"
+" Defaults
 if !exists('g:unicoder_exclude_filetypes')
   let g:unicoder_exclude_filetypes = ['tex', 'latex', 'plaintex']
 endif
 
+if !exists('g:unicoder_command_abbreviations')
+  let g:unicoder_command_abbreviations = 1
+endif
+
+"
+function! s:irepl(prefix, default, repl)
+  return getline('.')[col('.') - len(a:prefix) - 1] == a:prefix ?  "\<bs>".a:repl : a:default
+endfunction
+
+function! s:crepl(prefix, default, repl)
+  return getcmdline()[getcmdpos() - len(a:prefix) - 1] == a:prefix ? nr2char(8).a:repl : a:default
+endfunction
+
+function! s:Latexiab(opts, lhs, rhs)
+  exe 'inoreab '.a:opts.' '.a:lhs.' <c-r>=<sid>irepl("\\", '.string(a:lhs).', '.string(a:rhs).')<cr>'
+  if g:unicoder_command_abbreviations
+    exe 'cnoreab '.a:opts.' '.a:lhs.' <c-r>=<sid>crepl("\\", '.string(a:lhs).', '.string(a:rhs).')<cr>'
+  endif
+endfunction
+command! -nargs=+ Latexiab call s:Latexiab('<buffer>', <f-args>)
+
+" Initialization
 autocmd WinEnter,BufEnter *
   \ if index(g:unicoder_exclude_filetypes, &ft) < 0
   \ | call s:setup_abbreviations()
