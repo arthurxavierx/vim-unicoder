@@ -25,9 +25,9 @@ endfunction
 
 function! s:Prefixab(opts, prefix, lhs, rhs)
   let args = string(a:prefix).', '.string(a:lhs).', '.string(a:rhs)
-  exe 'inoreab '.a:opts.' '.a:lhs.' <c-r>=<sid>irepl('.args.')<cr>'
+  silent! exe 'inoreab '.a:opts.' '.a:lhs.' <c-r>=<sid>irepl('.args.')<cr>'
   if g:unicoder_command_abbreviations
-    exe 'cnoreab '.a:opts.' '.a:lhs.' <c-r>=<sid>crepl('.args.')<cr>'
+    silent! exe 'cnoreab '.a:opts.' '.a:lhs.' <c-r>=<sid>crepl('.args.')<cr>'
   endif
 endfunction
 command! -nargs=+ Prefixab call s:Prefixab('<buffer>', <f-args>)
