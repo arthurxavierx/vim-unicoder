@@ -221,7 +221,6 @@ function! s:setup_abbreviations()
   Prefixab  \\ times       ×
   Prefixab  \\ div         ÷
   Prefixab  \\ bullet      •
-  Prefixab  \\ o           ∘
   Prefixab  \\ comp        ∘
   Prefixab  \\ circ        ∘
   Prefixab  \\ cdot        ∙
@@ -316,20 +315,20 @@ function! s:setup_abbreviations()
 
   Prefixab  \\ simeq       ≃
   Prefixab  \\ nsimeq      ≄
-  Noprefixab \~=           ≃
-  Noprefixab \~=n          ≄
+  Noprefixab \=~           ≃
+  Noprefixab \=~n          ≄
 
   Prefixab  \\ cong        ≅
   Prefixab  \\ ncong       ≇
   Prefixab  \\ iso         ≅
   Prefixab  \\ niso        ≇
-  Noprefixab \~==          ≅
-  Noprefixab \~==n         ≇
+  Noprefixab \==~          ≅
+  Noprefixab \==~n         ≇
 
   Prefixab  \\ approx      ≈
   Prefixab  \\ napprox     ≉
-  Noprefixab \~~           ≈
-  Noprefixab \~~n          ≉
+  Noprefixab \~2           ≈
+  Noprefixab \~2n          ≉
 
   Prefixab  \\ neq         ≠
   Noprefixab \=n           ≠
@@ -342,7 +341,6 @@ function! s:setup_abbreviations()
   Noprefixab \===n         ≢
 
   Prefixab  \\ Equiv       ≣
-  Noprefixab \====         ≣
   " }}}
 
   " Inequalities {{{
@@ -359,12 +357,10 @@ function! s:setup_abbreviations()
   Prefixab  \\ ll          «
   Noprefixab \<<           «
   Prefixab  \\ lll         ⋘
-  Noprefixab \<<<          ⋘
 
   Prefixab  \\ gg          »
   Noprefixab \>>           »
   Prefixab  \\ ggg         ⋙
-  Noprefixab \>>>          ⋙
   " }}}
 
   " Entailment (turnstiles) {{{
@@ -374,8 +370,8 @@ function! s:setup_abbreviations()
   Prefixab  \\ nentails    ⊬
   Prefixab  \\ vdash       ⊢
   Prefixab  \\ nvdash      ⊬
-  Noprefixab \\|-          ⊢
-  Noprefixab \\|-n         ⊬
+  Noprefixab \\\|-         ⊢
+  Noprefixab \\\|-n        ⊬
 
   Prefixab  \\ dashv       ⊣
   Noprefixab \-\|          ⊣
@@ -383,21 +379,21 @@ function! s:setup_abbreviations()
   Prefixab  \\ models      ⊨
   Prefixab  \\ vDash       ⊨
   Prefixab  \\ nvDash      ⊭
-  Noprefixab \\|=          ⊨
-  Noprefixab \\|=n         ⊭
+  Noprefixab \\\|=         ⊨
+  Noprefixab \\\|=n        ⊭
 
   Prefixab  \\ Vdash       ⊩
   Prefixab  \\ nVdash      ⊮
-  Noprefixab \\|\|-        ⊩
-  Noprefixab \\|\|-n       ⊮
+  Noprefixab \\\|\|-       ⊩
+  Noprefixab \\\|\|-n      ⊮
 
   Prefixab  \\ VDash       ⊫
   Prefixab  \\ nVDash      ⊯
-  Noprefixab \\|\|=        ⊫
-  Noprefixab \\|\|=n       ⊯
+  Noprefixab \\\|\|=       ⊫
+  Noprefixab \\\|\|=n      ⊯
 
   Prefixab  \\ Vvdash      ⊪
-  Noprefixab \\|\|\|-      ⊪
+  Noprefixab \\\|\|\|-     ⊪
   " }}}
 
   " Circled operators {{{

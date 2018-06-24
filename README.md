@@ -280,16 +280,16 @@ the insertion.
 :---------------:|:---------:
 `\sim`  `\~`     |     ∼
 `\nsim` `\~n`    |     ≁
-`\simeq`  `\~=`  |     ≃
-`\nsimeq` `\~=n` |     ≄
-`\cong` `\iso` `\~==` | ≅
-`\ncong` `\niso` `\~==n` | ≇
-`\approx`  `\~~` |     ≈
-`\napprox` `\~~n`|     ≉
+`\simeq`  `\=~`  |     ≃
+`\nsimeq` `\=~n` |     ≄
+`\cong` `\iso` `\==~` | ≅
+`\ncong` `\niso` `\==~n` | ≇
+`\approx`  `\~2` |     ≈
+`\napprox` `\~2n`|     ≉
 `\neq` `\=n` `\!=` `\/=` | ≠
 `\equiv` `\===`  |     ≡
 `\nequiv` `\===n`|     ≢
-`\Equiv` `\====` |     ≣
+`\Equiv`         |     ≣
 
 #### Inequalities
   Abbreviations  | Character
@@ -299,9 +299,9 @@ the insertion.
 `\geq` `\>=`     |     ≥
 `\ngeq` `\>=n`   |     ≱
 `\ll` `\<<`      |     «
-`\lll` `\<<<`    |     ⋘
+`\lll`           |     ⋘
 `\gg` `\>>`      |     »
-`\ggg` `\>>>`    |     ⋙
+`\ggg`           |     ⋙
 
 #### Entailment (turnstiles)
   Abbreviations  | Character
