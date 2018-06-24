@@ -14,13 +14,23 @@ endif
 
 "
 function! s:irepl(prefix, default, repl)
-  let bs = repeat("\<bs>", len(a:prefix))
-  return getline('.')[col('.') - len(a:prefix) - 1] == a:prefix ? bs.a:repl : a:default
+  let n = len(a:prefix)
+  let bs = repeat("\<bs>", n)
+  if n > 0
+    return getline('.')[col('.') - n - 1] == a:prefix ? bs.a:repl : a:default
+  else
+    return a:repl
+  endif
 endfunction
 
 function! s:crepl(prefix, default, repl)
-  let bs = repeat(nr2char(8), len(a:prefix))
-  return getcmdline()[getcmdpos() - len(a:prefix) - 1] == a:prefix ? bs.a:repl : a:default
+  let n = len(a:prefix)
+  let bs = repeat(nr2char(8), n)
+  if n > 0
+    return getcmdline()[getcmdpos() - n - 1] == a:prefix ? bs.a:repl : a:default
+  else
+    return a:repl
+  endif
 endfunction
 
 function! s:Prefixab(opts, prefix, lhs, rhs)
