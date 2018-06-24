@@ -247,18 +247,14 @@ the insertion.
 #### Logic
   Abbreviations  | Character
 :---------------:|:---------:
-  `\land`        |     ∧
-  `\lor`         |     ∨
-  `\lnot`        |     ¬
-  `\neg`         |     ¬
+  `\land` `\and` |     ∧
+  `\lor` `\or`   |     ∨
+  `\lnot` `\not` `\neg`|     ¬
   `\top`         |     ⊤
   `\bot`         |     ⊥
-  `\multimap`    |     ⊸
-  `\-o`          |     ⊸
-  `\multimapinv` |     ⟜
-  `\invmultimap` |     ⟜
-  `\parr`        |     ⅋
-  `\invamp`      |     ⅋
+  `\multimap` `\-o`|     ⊸
+  `\multimapinv` `\invmultimap`|     ⟜
+  `\parr` `\invamp`|     ⅋
   `\therefore`   |     ∴
   `\because`     |     ∵
 

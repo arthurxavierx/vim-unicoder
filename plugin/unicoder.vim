@@ -273,8 +273,11 @@ function! s:setup_abbreviations()
 
   " Logic {{{
   Prefixab  \\ land        ∧
+  Prefixab  \\ and         ∧
   Prefixab  \\ lor         ∨
+  Prefixab  \\ or          ∨
   Prefixab  \\ lnot        ¬
+  Prefixab  \\ not         ¬
   Prefixab  \\ neg         ¬
 
   Prefixab  \\ top         ⊤
