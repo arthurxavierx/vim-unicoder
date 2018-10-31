@@ -3,7 +3,7 @@ if exists('g:loaded_unicoder')
 endif
 let g:loaded_unicoder = 1
 
-" Defaults
+" Defaults {{{
 if !exists('g:unicoder_exclude_filetypes')
   let g:unicoder_exclude_filetypes = ['tex', 'latex', 'plaintex']
 endif
@@ -11,8 +11,8 @@ endif
 if !exists('g:unicoder_command_abbreviations')
   let g:unicoder_command_abbreviations = 1
 endif
+" }}}
 
-"
 function! s:irepl(prefix, default, repl)
   let n = len(a:prefix)
   let bs = repeat("\<bs>", n)
@@ -175,6 +175,7 @@ function! s:setup_abbreviations()
   Prefixab  \\ bdiamond    ◆
   Prefixab  \\ lozenge     ◊
 
+  Prefixab  \\ circ        ○
   Prefixab  \\ circle      ○
   Prefixab  \\ bcircle     ●
   Prefixab  \\ dcircle     ◌
@@ -217,12 +218,10 @@ function! s:setup_abbreviations()
 
   Prefixab  \\ qed         ∎
   Prefixab  \\ ast         ∗
-  Noprefixab \x            ×
   Prefixab  \\ times       ×
   Prefixab  \\ div         ÷
   Prefixab  \\ bullet      •
   Prefixab  \\ comp        ∘
-  Prefixab  \\ circ        ∘
   Prefixab  \\ cdot        ∙
   Noprefixab \.            ∙
   Noprefixab \:            ∶

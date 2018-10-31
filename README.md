@@ -200,7 +200,7 @@ the insertion.
 `\coprod`        |     ∐
 `\qed`           |     ∎
 `\ast`           |     ∗
-`\x` `\times`    |     ×
+`times`          |     ×
 `\div`           |     ÷
 `\bullet`        |     •
 `\o` `\comp` `\circ`|     ∘
