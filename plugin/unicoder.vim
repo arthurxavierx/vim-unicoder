@@ -240,6 +240,24 @@ function! s:setup_abbreviations()
   Prefixab  \\ nexists     ∄
   Prefixab  \\ nex         ∄
 
+  " Brackets {{{
+  Prefixab  \\ lceil        ⌈
+  Prefixab  \\ rceil        ⌉
+
+  Prefixab  \\ lfloor       ⌊
+  Prefixab  \\ rfloor       ⌋
+
+  Prefixab  \\ langle       ⟨
+  Prefixab  \\ rangle       ⟩
+
+  Prefixab  \\ llens        ⦇
+  Prefixab  \\ rlens        ⦈
+
+  Noprefixab \[[            ⟦
+  Noprefixab \]]            ⟧
+  " }}}
+
+
   " Sets {{{
   Prefixab  \\ empty       ∅
   Prefixab  \\ emptyset    ∅
