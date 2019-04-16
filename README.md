@@ -19,6 +19,7 @@ Insert cool unicode characters while in _insert mode_ just by typing LaTeX and [
     - [Shapes](#shapes)
     - [Miscellaneous](#miscellaneous)
     - [Math symbols](#math-symbols)
+        - [Brackets](#brackets)
         - [Set theory](#set-theory)
         - [Lattices](#lattices)
         - [Logic](#logic)
@@ -216,6 +217,20 @@ the insertion.
 `\all` `\forall` |     ∀
 `\ex` `\exists`  |     ∃
 `\nex` `\nexists`|     ∄
+
+#### Brackets
+  Abbreviations  | Character
+:---------------:|:---------:
+  `\lceil`       |     ⌈
+  `\rceil`       |     ⌉
+  `\lfloor`      |     ⌊
+  `\rfloor`      |     ⌋
+  `\langle`      |     ⟨
+  `\rangle`      |     ⟩
+  `\llens`       |     ⦇
+  `\rlens`       |     ⦈
+  `\[[`          |     ⟦
+  `\]]`          |     ⟧
 
 #### Set theory
   Abbreviations  | Character
